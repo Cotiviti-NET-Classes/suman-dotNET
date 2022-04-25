@@ -1,0 +1,30 @@
+﻿@model IList<MvcProject1.Models.Employee.Employee>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Employees Details</h1>
+    <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Salary</th>
+            <th>Department</th>
+        </tr>
+       
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Address</td>
+                <td>@item.Phone</td>
+                <td>@item.Salary</td>
+                <td>@item.Department</td> 
+            </tr>
+        }
+    </table>
+</div>
